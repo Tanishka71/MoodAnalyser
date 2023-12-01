@@ -22,4 +22,12 @@ class MoodAnalyserTest {
 				"Checks for the mood.");
 	}
 
+		@Test
+	/* @desc:check for null pointer (TESTCASE 2.1) */
+	void checkForException() {
+		MoodAnalyser mood=new MoodAnalyser();
+		assertEquals("Happy",mood.analyseMood(),
+				"Checks for the mood.");
+	}
+
 }
