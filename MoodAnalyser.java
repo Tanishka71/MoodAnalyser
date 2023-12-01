@@ -27,11 +27,16 @@ public class MoodAnalyser {
 	 * @return:String
 	 */
 	String analyseMood() {
+		try {
 		if(message.contains("Sad")) {
 			return "Sad";
 		}
 		else {
 			return "Happy";
+		}}
+		catch (NullPointerException e){
+			return "Happy";
 		}
 	}
+}
 }
