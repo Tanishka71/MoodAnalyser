@@ -1,5 +1,5 @@
 package com.bridgelabz.mood;
-
+import java.util.*;
 public class MoodAnalyserMain {
     
 	/*
@@ -8,8 +8,16 @@ public class MoodAnalyserMain {
 	 * @return:none
 	 */
 	public static void main(String[] args) {
-		MoodAnalyser mood=new MoodAnalyser("Tanishka is Happy");
-		String answer=mood.analyseMood();
-		System.out.println(answer);
+		Scanner scanner=new Scanner(System.in);
+      MoodAnalyser moodAnalyzer=new MoodAnalyser();
+      System.out.println("Enter your mood : ");
+        try {
+        	String mood1=scanner.nextLine();
+            String result = moodAnalyzer.analyseMood();
+            System.out.println("Mood: " + result);
+        } catch (MoodAnalysisException e) {
+            System.out.println("Error: " + e.getError());
+        }
+  
 	}
 }
